@@ -31,7 +31,7 @@ export default function SearchMovies() {
               </form>
               <div className="card-list">
                 
-                {movies.filter(movie => movie.Poster).map(movie => ( //filters any movie with no poster
+                {movies.map(movie => (
                     <div className="card" key={movie.imdbID}>
                     <img className="card--image"
                        src={movie.Poster}
@@ -39,7 +39,7 @@ export default function SearchMovies() {
                       <div className="card--content">
                           <h2 className="card--title">{movie.Title}</h2>
                           <p>Released : {movie.Year}</p>
-                          <button>Nominate</button>
+                          <button id="nominate">Nominate</button>
                       </div>
                     </div>
                 ))}
