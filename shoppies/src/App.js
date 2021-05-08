@@ -1,7 +1,8 @@
 import React , {useState} from 'react';
 import SearchMovies from './searchMovies';
-import AddToList from './addToList';
+// import AddToList from './addToList';
 import "./index.css";
+import NominateTag from './nominateTag';
 
 
 const App = () => {
@@ -43,16 +44,20 @@ const App = () => {
                             />
                     <button type="submit" className="button">Search</button>
                     </form>
-                <div className="card-list">
-              <SearchMovies
-              movies={movies}
-              /> 
-              </div>  
-                <div className="nominees">
+                    <div className="nominees">
                         <h1>The Nominees</h1>
-                        <AddToList
-                        handleNomClick={addNomination}/>
-                </div>
+                            <SearchMovies
+                            movies={nominee}
+                            nomComponent={NominateTag}
+                            />
+                    </div>
+                <div className="card-list">
+                    <SearchMovies
+                    movies={movies}
+                    nomComponent={NominateTag}
+                    handleNomClick={addNomination}
+                    /> 
+                </div>  
               </div>           
             );
 

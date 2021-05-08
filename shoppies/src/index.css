@@ -42,6 +42,8 @@ label {
  flex-direction: row;
  flex-flow: wrap;
  justify-content: center;
+ position: relative;
+ z-index: 0;
 }
 
 .card {
@@ -95,12 +97,18 @@ label {
 }
 
 .nominees {
-  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
   color: aliceblue;
   background-color: rgba(0, 0, 128, 0.63);
-  width: 25%;
-  height: 100%;
-  position: relative;
+  z-index: 2;
+  position: absolute;
+  margin-left: 95%;
+}
+
+.nominees:hover {
+  margin-left: 75%;
 }

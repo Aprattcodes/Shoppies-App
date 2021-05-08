@@ -1,12 +1,12 @@
 import React from "react";
-import NominateTag from './nominateTag';
+// import NominateTag from './nominateTag';
 // import AddToList from './addToList';
 
 const SearchMovies = (props) => {
-               
+         const NomComponent = props.nomComponent;      
 return(
   <>
-                {props.movies.map((movie, index) => (
+                {props.movies.map((movie) => (
                     <div className="card" key={movie.imdbID}>
                     <img className="card--image"
                        src={movie.Poster}
@@ -14,7 +14,7 @@ return(
                     <div className="card--content">
                           <h2 className="card--title">{movie.Title} ({movie.Year})</h2>
                           <div onClick={() => props.handleNomClick(movie)} className='overlay'>
-                              <NominateTag/>   
+                              <NomComponent/>   
                           </div> 
                     </div>     
                 </div>
