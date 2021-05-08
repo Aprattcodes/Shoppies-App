@@ -1,6 +1,5 @@
 import React , {useState} from 'react';
 import SearchMovies from './searchMovies';
-// import AddToList from './addToList';
 import "./index.css";
 import NominateTag from './nominateTag';
 
@@ -16,6 +15,7 @@ const App = () => {
     const addNomination = (movie) => {
         const newNomList = [...nominee, movie];
         selectNominee(newNomList);
+
     };
 
   const searchMovies = async (e) => {
