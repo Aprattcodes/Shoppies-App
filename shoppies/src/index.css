@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Tinos&display=swap');
+
+/* font-family: 'Josefin Sans', sans-serif;
+font-family: 'Tinos', serif; */
+
 html {
   font-size: 10px;
   color: black;
@@ -33,6 +38,7 @@ label {
 
 .title {
   font-size: 8rem;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   color: teal;
 }
@@ -47,20 +53,29 @@ label {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   padding: 2rem 4rem 1rem;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
   margin: 2rem;
-  background-color: darkgrey;
-  width: 38rem;
+  background-color: rgb(92, 92, 92);
   position: relative;
   transition: transform 0.2s;
 }
 
 .card--title{
   font-size: 1.5rem;
+  font-family: 'Tinos', serif;
   text-align: center;
   padding: 5px;
+  width: 20rem;
+}
+
+.card--image{
+  height: auto;
+  width: 20rem;
+  align-self: center;
 }
 
 .card--content {
@@ -82,8 +97,12 @@ label {
   position: absolute;
 }
 
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+}
 .overlay {
-	
+  font-family: 'Josefin Sans', sans-serif;
 	background: rgba(0, 0, 0, 0.8);
   color: aliceblue;
 	width: 100%;
@@ -98,17 +117,11 @@ label {
 
 .nominees {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
   color: aliceblue;
-  background-color: rgba(0, 0, 128, 0.63);
+  background-color: rgba(109, 139, 10, 0.63);
   z-index: 2;
-  position: absolute;
-  margin-left: 95%;
-}
-
-.nominees:hover {
-  margin-left: 75%;
 }

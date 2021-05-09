@@ -1,13 +1,15 @@
 import React from "react";
 import Movies from "./movie"
+import NominateTag from "./nominateTag";
 
 const SearchMovies = (props) => {
 
 return(
   <>
-                {props.movies.map((movie) => (
+                {props.movies.map((movie) => ( //add search list to array
                     <Movies 
                     movie={movie}
+                    visible={true} //banner visible 
                     nomComponent={props.nomComponent}
                     handleNomClick={props.handleNomClick}
                     />

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
+import NominateTag from './nominateTag';
 
 const Movies = (props) => {
-    const NomComponent = props.nomComponent; 
     const movie = props.movie;
     const [selected, setSelected] = useState(false);   
 return(
@@ -16,8 +16,10 @@ return(
                          <div onClick={() => {
                              props.handleNomClick(movie);
                                 setSelected(true);
-                             }} className='overlay'>
-                         <NomComponent/>   
+                             }}>
+                         <NominateTag
+                         visible = {props.visible}
+                         />  
                      </div>} 
                </div>     
             </div>
