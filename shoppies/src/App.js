@@ -3,6 +3,7 @@ import SearchMovies from './searchMovies';
 import "./index.css";
 import NominateTag from './nominateTag';
 import NominatedList from './nominatedList';
+import RemoveNominee from './remove';
 
 
 const App = () => {
@@ -19,11 +20,17 @@ const App = () => {
     const addNomination = (movie) => {
         const newNomList = [...nominee, movie];
         selectNominee(newNomList);
-        console.log(newNomList);
         if (newNomList.length === 5) {
           topFive(true)
-          console.log("hello")
         }
+    };
+
+    const removeNomination = (movie) => {
+      const newNomList = nominee.filter(
+        (nom) => nom.imdbID !== movie.imdbID
+      );
+      selectNominee(newNomList);
+      console.log(newNomList);
     };
 
   const searchMovies = async (e) => {
@@ -65,7 +72,8 @@ const App = () => {
                         </svg>
                             <NominatedList
                             movies={nominee}
-                            nomComponent={NominateTag}
+                            nomComponent={RemoveNominee}
+                            handleNomClick={removeNomination}
                             />
                       </div>
                     }

@@ -1,6 +1,6 @@
 import React from "react";
 import Movies from "./movie"
-import NominateTag from "./nominateTag";
+
 
 const SearchMovies = (props) => {
 

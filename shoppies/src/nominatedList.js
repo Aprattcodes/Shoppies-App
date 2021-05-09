@@ -1,5 +1,6 @@
 import React from "react";
 import Movies from "./movie";
+// import RemoveNominee from './remove';
 
 const NominatedList = (props) => {
 
@@ -8,10 +9,12 @@ const NominatedList = (props) => {
                     {props.movies.map((movie) => ( //add movies to array
                         <Movies 
                         movie={movie}
-                        visible={false} //banner not visible
-                        handleNomClick={() => {}} //empty prop
+                        remVisible={true} //banner not visible
+                        handleNomClick={props.handleNomClick} //empty prop
                         />
+                        
                     ))}
+                    
       </>
       )
     }
