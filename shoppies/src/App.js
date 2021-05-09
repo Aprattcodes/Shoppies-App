@@ -23,14 +23,18 @@ const App = () => {
         if (newNomList.length === 5) {
           topFive(true)
         }
+        
     };
 
     const removeNomination = (movie) => {
       const newNomList = nominee.filter(
         (nom) => nom.imdbID !== movie.imdbID
       );
+      
       selectNominee(newNomList);
-      console.log(newNomList);
+      if (newNomList.length === 0) {
+        topFive(false)
+      }
     };
 
   const searchMovies = async (e) => {

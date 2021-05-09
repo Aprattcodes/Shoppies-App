@@ -3,19 +3,21 @@ import Movies from "./movie";
 // import RemoveNominee from './remove';
 
 const NominatedList = (props) => {
-
+  
     return(
       <>
-                    {props.movies.map((movie) => ( //add movies to array
+      
+                    {
+                    props.movies.map((movie, index) => ( //add movies to array
                         <Movies 
                         movie={movie}
-                        remVisible={true} //banner not visible
+                        remVisible = {true}
                         handleNomClick={props.handleNomClick} //empty prop
                         />
-                        
                     ))}
                     
       </>
       )
     }
     export default NominatedList;
+

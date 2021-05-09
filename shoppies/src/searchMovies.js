@@ -6,7 +6,7 @@ const SearchMovies = (props) => {
 
 return(
   <>
-                {props.movies.map((movie) => ( //add search list to array
+                {props.movies.map((movie, index) => ( //add search list to array
                     <Movies 
                     movie={movie}
                     visible={true} //banner visible 
